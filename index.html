@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cliente-Servidor: Hola Mundo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: left;
+      padding: 50px;
+    }
+    #message-container {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .message {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <div id="message-container"></div>
+
+  <script>
+    // Utilizamos setInterval para agregar "Hola Mundo!" cada 5 segundos en una nueva línea
+    setInterval(() => {
+      const messageContainer = document.getElementById('message-container');
+      
+      // Crea un nuevo elemento de párrafo con el mensaje
+      const newMessage = document.createElement('p');
+      newMessage.classList.add('message');
+      newMessage.textContent = 'Hola Mundo!';
+      
+      // Añade el nuevo mensaje al contenedor
+      messageContainer.appendChild(newMessage);
+    }, 5000);
+  </script>
+</body>
+</html>
+
